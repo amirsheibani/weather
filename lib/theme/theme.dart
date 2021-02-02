@@ -170,10 +170,10 @@ class AppTheme {
   static ThemeData lightTheme() {
     final ThemeData base = ThemeData.light();
     ColorScheme colorScheme = base.colorScheme.copyWith(
-        primary: Colors.teal.shade900,
-        primaryVariant: Colors.teal.shade900,
-        secondary: Colors.teal,
-        secondaryVariant: Colors.teal,
+        primary: Color(0xff91A794),
+        primaryVariant: Color(0xff91A794),
+        secondary: Color(0xff405881),
+        secondaryVariant: Color(0xff405881),
         surface: Colors.lightBlueAccent,
         background: const Color(0xFFE5E5E5),
         error: Colors.redAccent,
@@ -183,13 +183,13 @@ class AppTheme {
       iconTheme: base.iconTheme.copyWith(color: const Color(0xFF164D3F)),
       bottomNavigationBarTheme: base.bottomNavigationBarTheme.copyWith(
           selectedItemColor: Colors.teal, unselectedItemColor: const Color(0xFF164D3F)),
-      scaffoldBackgroundColor: Colors.white,
+      scaffoldBackgroundColor: Color(0xff91A794),
       primaryColorLight: Colors.white,
       primaryColorDark: const Color(0xFF313334),
       primaryColor: Colors.white,
       brightness: Brightness.dark,
-      backgroundColor: Colors.white,
-      accentColor: Colors.white,
+      backgroundColor: Color(0xff91A794),
+      accentColor: Color(0xff91A794),
       accentIconTheme: IconThemeData(color: Colors.white),
       dividerColor: Colors.teal,
       bottomAppBarColor: Colors.blueGrey.shade200,
@@ -227,10 +227,21 @@ class AppTheme {
       textTheme: _buildTextTheme(base.textTheme, fontColorDarkTheme),
     );
   }
+
 }
 
 final darkTheme = AppTheme.darkTheme();
 final lightTheme = AppTheme.lightTheme();
+
+class ColorsBox{
+  // ColorsBox._();
+  static const Map<DayState,Color> DayStateColor = <DayState,Color>{
+    DayState.morning: const Color(0xffdcbc8f),
+    DayState.afternoon: const Color(0xffD19B6C),
+    DayState.evening: const Color(0xffA76C5E),
+    DayState.night: const Color(0xff5F4849)
+  };
+}
 
 class HexColor extends Color {
   static int _getColorFromHex(String hexColor) {
@@ -243,3 +254,12 @@ class HexColor extends Color {
 
   HexColor(final String hexColor) : super(_getColorFromHex(hexColor));
 }
+
+enum DayState{
+  morning,afternoon,evening,night
+}
+// enum WeatherStatus{
+//   Sunny,Mostly_Sunny,Partly_Sunny,Intermittent_Clouds,Hazy_Sunshine,Mostly_Cloudy,Cloudy,Dreary,Fog,Showers,Mostly_Cloudy_Showers,Partly_Sunny_Showers,T_Storms,Mostly_Cloudy_T_Storms,
+//   Partly_Sunny_T_Storms,Rain,Flurries,Mostly_Cloudy_Flurries,Partly_Sunny_Flurries,Snow,Mostly_Cloudy_Snow,Ice,Sleet,Freezing_Rain,Rain_And_Snow,Hot,Cold,Windy,Clear,Mostly_Clear,Partly_Cloudy,
+//   Intermittent_Clouds,
+// }

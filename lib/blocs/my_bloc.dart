@@ -1,8 +1,8 @@
 import 'dart:async';
 import 'dart:io';
 
-import 'package:empty_project/blocs/bloc_provider.dart';
-import 'package:empty_project/event/event.dart';
+import 'package:weather/blocs/bloc_provider.dart';
+import 'package:weather/event/event.dart';
 import 'package:rxdart/rxdart.dart';
 
 

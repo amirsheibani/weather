@@ -1,7 +1,7 @@
 import 'dart:io';
 import 'dart:math';
 
-import 'package:empty_project/global.dart';
+import 'package:weather/global.dart';
 import 'package:flutter/material.dart';
 import 'package:path_provider_ex/path_provider_ex.dart';
 import 'package:shared_preferences/shared_preferences.dart';

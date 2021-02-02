@@ -1,4 +1,4 @@
-name: empty_project
+name: weather
 description: A new Flutter application.
 
 # The following line prevents the package from being accidentally published to
@@ -125,4 +125,23 @@ flutter:
         - asset: assets/fonts/WorkSans-Bold.ttf
           weight: 700
   assets:
-    - assets/images/logo_download_manager.png
+    - assets/images/cloud_afternoon.png
+    - assets/images/cloud_evening.png
+    - assets/images/cloud_morning.png
+    - assets/images/cloud_night.png
+    - assets/images/moon_afternoon.png
+    - assets/images/moon_evening.png
+    - assets/images/moon_morning.png
+    - assets/images/moon_night.png
+    - assets/images/rain_afternoon.png
+    - assets/images/rain_evening.png
+    - assets/images/rain_morning.png
+    - assets/images/rain_night.png
+    - assets/images/snow_afternoon.png
+    - assets/images/snow_evening.png
+    - assets/images/snow_morning.png
+    - assets/images/snow_night.png
+    - assets/images/sunny_afternoon.png
+    - assets/images/sunny_evening.png
+    - assets/images/sunny_morning.png
+    - assets/images/sunny_night.png

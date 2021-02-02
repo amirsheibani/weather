@@ -1,10 +1,10 @@
 import 'dart:io';
 
-import 'package:empty_project/global.dart';
-import 'package:empty_project/pages/home_page.dart';
-import 'package:empty_project/theme/theme.dart';
-import 'package:empty_project/theme/theme_notifier.dart';
-import 'package:empty_project/utils/utility.dart';
+import 'package:weather/global.dart';
+import 'package:weather/pages/home_page.dart';
+import 'package:weather/theme/theme.dart';
+import 'package:weather/theme/theme_notifier.dart';
+import 'package:weather/utils/utility.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_device_type/flutter_device_type.dart';
@@ -71,4 +71,8 @@ class Routes {
   static const String SPLASH = "/";
   static const String HOME = "/home";
   static const String SETTING = "/setting";
+}
+
+enum DayImageAnimationStatus{
+  RiseSet,SetRise
 }
