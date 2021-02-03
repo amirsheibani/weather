@@ -33,6 +33,7 @@ class _SunnyWidgetState extends State<SunnyWidget> with TickerProviderStateMixin
 
   @override
   void dispose() {
+    _controller.dispose();
     super.dispose();
   }
 
@@ -55,8 +56,8 @@ class _SunnyWidgetState extends State<SunnyWidget> with TickerProviderStateMixin
     return RotationTransition(
       turns: _animation,
       child: Container(
-        width: 256,
-        height: 256,
+        width: 128,
+        height: 128,
         decoration: BoxDecoration(
         image: DecorationImage(
           image: ExactAssetImage(_imagePath),

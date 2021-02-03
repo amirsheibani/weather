@@ -1,5 +1,10 @@
 import 'package:weather/blocs/my_bloc.dart';
+import 'package:weather/pages/custom/cloudy.dart';
 import 'package:weather/pages/custom/day_state_information_widget.dart';
+import 'package:weather/pages/custom/hazy_sunshine.dart';
+import 'package:weather/pages/custom/mostly_cloudy.dart';
+import 'package:weather/pages/custom/mostly_sunny.dart';
+import 'package:weather/pages/custom/partly_sunny.dart';
 import 'package:weather/pages/custom/sunny_widget.dart';
 import 'package:weather/pages/setting_page.dart';
 import 'package:flutter/material.dart';
@@ -354,7 +359,12 @@ class _HomePageState extends State<HomePage> {
               ],
             ),
             AnimatedPositioned(
-              child: SunnyWidget(_lastDayState),
+              // child: SunnyWidget(_lastDayState),
+              // child: MostlySunnyWidget(_lastDayState,256,256),
+              // child: PartlySunnyWidget(_lastDayState,256,256),
+              // child: HazySunshineWidget(_lastDayState,256,256),
+              // child: MostlyCloudyWidget(_lastDayState,256,256),
+              child: CloudyWidget(_lastDayState,256,256),
               duration: Duration(milliseconds: 1000),
               top: _positionDayStatusWidget.dy,
               left: width,
