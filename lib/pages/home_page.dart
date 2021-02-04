@@ -1,4 +1,5 @@
 import 'package:weather/blocs/my_bloc.dart';
+import 'package:weather/model/temp_status.dart';
 import 'package:weather/pages/custom/cloudy.dart';
 import 'package:weather/pages/custom/day_state_information_widget.dart';
 import 'package:weather/pages/custom/dreary.dart';
@@ -17,13 +18,14 @@ import 'package:weather/pages/custom/rain.dart';
 import 'package:weather/pages/custom/rain_snow.dart';
 import 'package:weather/pages/custom/showers.dart';
 import 'package:weather/pages/custom/sleet.dart';
-import 'package:weather/pages/custom/sunny_widget.dart';
+import 'package:weather/pages/custom/sunny.dart';
 import 'package:weather/pages/custom/t_storms.dart';
 import 'package:weather/pages/custom/windy.dart';
 import 'package:weather/pages/setting_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_device_type/flutter_device_type.dart';
 import 'package:weather/theme/theme.dart';
+import 'package:weather/utils/utility.dart';
 
 import '../main.dart';
 import 'custom/snow.dart';
@@ -42,6 +44,8 @@ class _HomePageState extends State<HomePage> {
   double bottomSpace;
   double paddingTop = 0;
   Offset _positionDayStatusWidget;
+
+  Widget statusWidget = Container();
 
   @override
   void initState() {
@@ -170,6 +174,8 @@ class _HomePageState extends State<HomePage> {
       sectionNightHeight += sectionSpaceHeight;
       nightInformationWidgets.add(DayStateInformationWidget());
     }
+
+    getStatusWidget();
 
     return Scaffold(
         appBar: _appBar(context),
@@ -394,7 +400,7 @@ class _HomePageState extends State<HomePage> {
               // child: IceWidget(_lastDayState,256,256),
               // child: RainSnowWidget(_lastDayState,256,256),
               // child: SleetWidget(_lastDayState,256,256),
-              child: WindyWidget(_lastDayState,256,256),
+              child: statusWidget,
               duration: Duration(milliseconds: 1000),
               top: _positionDayStatusWidget.dy,
               left: width,
@@ -461,6 +467,97 @@ class _HomePageState extends State<HomePage> {
         },
       ),
     );
+  }
+  void getStatusWidget()  {
+    SharedPref sharedPref = SharedPref();
+    sharedPref.read("status").then((value){
+      TempStatus status = TempStatus.fromJson(value);
+      if(status.isSwitchedCloudy){
+        setState(() {
+          statusWidget = CloudyWidget(_lastDayState,256,256);
+        });
+      }else if(status.isSwitchedDreary){
+        setState(() {
+          statusWidget = DrearyWidget(_lastDayState,256,256);
+        });
+      }else if(status.isSwitchedFog){
+        setState(() {
+          statusWidget = FogWidget(_lastDayState,256,256);
+        });
+      }else if(status.isSwitchedIce){
+        setState(() {
+          statusWidget = IceWidget(_lastDayState,256,256);
+        });
+      }else if(status.isSwitchedMostlyCloudy){
+        setState(() {
+          statusWidget = MostlyCloudyWidget(_lastDayState,256,256);
+        });
+      }else if(status.isSwitchedMostlyCloudyShowers){
+        setState(() {
+          statusWidget = MostlyCloudyShowersWidget(_lastDayState,256,256);
+        });
+      }else if(status.isSwitchedMostlyCloudyTStorms){
+        setState(() {
+          statusWidget = MostlyCloudyTStormsWidget(_lastDayState,256,256);
+        });
+      }else if(status.isSwitchedMostlyCloudySnow){
+        setState(() {
+          statusWidget = MostlyCloudySnowWidget(_lastDayState,256,256);
+        });
+      }else if(status.isSwitchedPartlySunny){
+        setState(() {
+          statusWidget = PartlySunnyWidget(_lastDayState,256,256);
+        });
+      }else if(status.isSwitchedPartlySunnyShower){
+        setState(() {
+          statusWidget = PartlySunnyShowersWidget(_lastDayState,256,256);
+        });
+      }else if(status.isSwitchedPartlySunnyTStorms){
+        setState(() {
+          statusWidget = PartlySunnyTStormsWidget(_lastDayState,256,256);
+        });
+      }else if(status.isSwitchedRain){
+        setState(() {
+          statusWidget = RainWidget(_lastDayState,256,256);
+        });
+      }else if(status.isSwitchedRainSnow){
+        setState(() {
+          statusWidget = RainSnowWidget(_lastDayState,256,256);
+        });
+      }else if(status.isSwitchedShowers){
+        setState(() {
+          statusWidget = ShowersWidget(_lastDayState,256,256);
+        });
+      }else if(status.isSwitchedSleet){
+        setState(() {
+          statusWidget = SleetWidget(_lastDayState,256,256);
+        });
+      }else if(status.isSwitchedSnow){
+        setState(() {
+          statusWidget = SnowWidget(_lastDayState,256,256);
+        });
+      }else if(status.isSwitchedSunny){
+        setState(() {
+          statusWidget = SunnyWidget(_lastDayState,256,256);
+        });
+      }else if(status.isSwitchedTStorms){
+        setState(() {
+          statusWidget = TStormsWidget(_lastDayState,256,256);
+        });
+      }else if(status.isSwitchedWindy){
+        setState(() {
+          statusWidget = WindyWidget(_lastDayState,256,256);
+        });
+      }else if(status.isSwitchedHazy){
+        setState(() {
+          statusWidget =  HazyWidget(_lastDayState,256,256);
+        });
+      }else if(status.isSwitchedMostlySunny){
+        setState(() {
+          statusWidget =  MostlySunnyWidget(_lastDayState,256,256);
+        });
+      }
+    });
   }
 
   void _goToSettingPage() {

@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:weather/global.dart';
+import 'package:weather/model/temp_status.dart';
 import 'package:weather/pages/home_page.dart';
 import 'package:weather/theme/theme.dart';
 import 'package:weather/theme/theme_notifier.dart';
@@ -33,7 +34,15 @@ void main() async{
       ),
     );
   });
+  SharedPref sharedPref = SharedPref();
+  var status =  await sharedPref.read("status");
+  if(status == null){
+    TempStatus tempStatus = TempStatus(false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, true, false, false);
+    sharedPref.save("status", tempStatus.toJson());
+  }
 }
+
+
 
 class MyApp extends StatefulWidget {
 
