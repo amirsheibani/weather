@@ -125,28 +125,28 @@ class _TStormsWidgetState extends State<TStormsWidget> with TickerProviderStateM
       case DayState.morning:
         {
           _cloudImagePath = 'assets/images/cloud_morning.png';
-          _rainImagePath = 'assets/images/rain_morning.png';
+          _rainImagePath = 'assets/images/showers_morning.png';
           _thunderStormImagePath = 'assets/images/thunder_storm.png';
         }
         break;
       case DayState.afternoon:
         {
           _cloudImagePath = 'assets/images/cloud_evening.png';
-          _rainImagePath = 'assets/images/rain_evening.png';
+          _rainImagePath = 'assets/images/showers_evening.png';
           _thunderStormImagePath = 'assets/images/thunder_storm.png';
         }
         break;
       case DayState.evening:
         {
           _cloudImagePath = 'assets/images/cloud_night.png';
-          _rainImagePath = 'assets/images/rain_night.png';
+          _rainImagePath = 'assets/images/showers_night.png';
           _thunderStormImagePath = 'assets/images/thunder_storm.png';
         }
         break;
       case DayState.night:
         {
           _cloudImagePath = 'assets/images/cloud_afternoon.png';
-          _rainImagePath = 'assets/images/rain_afternoon.png';
+          _rainImagePath = 'assets/images/showers_afternoon.png';
           _thunderStormImagePath = 'assets/images/thunder_storm.png';
         }
         break;

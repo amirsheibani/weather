@@ -110,25 +110,25 @@ class _ShowersWidgetState extends State<ShowersWidget> with TickerProviderStateM
       case DayState.morning:
         {
           _cloudImagePath = 'assets/images/cloud_morning.png';
-          _rainImagePath = 'assets/images/rain_morning.png';
+          _rainImagePath = 'assets/images/showers_morning.png';
         }
         break;
       case DayState.afternoon:
         {
           _cloudImagePath = 'assets/images/cloud_evening.png';
-          _rainImagePath = 'assets/images/rain_evening.png';
+          _rainImagePath = 'assets/images/showers_evening.png';
         }
         break;
       case DayState.evening:
         {
           _cloudImagePath = 'assets/images/cloud_night.png';
-          _rainImagePath = 'assets/images/rain_night.png';
+          _rainImagePath = 'assets/images/showers_night.png';
         }
         break;
       case DayState.night:
         {
           _cloudImagePath = 'assets/images/cloud_afternoon.png';
-          _rainImagePath = 'assets/images/rain_afternoon.png';
+          _rainImagePath = 'assets/images/showers_afternoon.png';
         }
         break;
     }

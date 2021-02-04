@@ -109,7 +109,7 @@ class _MostlyCloudyWidgetState extends State<MostlyCloudyWidget> with TickerProv
         break;
       case DayState.night:
         {
-          _sunnyImagePath = 'assets/images/sunny_afternoon.png';
+          _sunnyImagePath = 'assets/images/moon_afternoon.png';
           _cloudImagePath = 'assets/images/cloud_afternoon.png';
         }
         break;

@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:weather/theme/theme.dart';
 
-class HazySunshineWidget extends StatefulWidget {
+class HazyWidget extends StatefulWidget {
   final DayState dayState;
   final double width;
   final double height;
 
-  HazySunshineWidget(this.dayState, this.width, this.height);
+  HazyWidget(this.dayState, this.width, this.height);
 
   @override
-  _HazySunshineWidgetState createState() => _HazySunshineWidgetState();
+  _HazyWidgetState createState() => _HazyWidgetState();
 }
 
-class _HazySunshineWidgetState extends State<HazySunshineWidget> with TickerProviderStateMixin {
+class _HazyWidgetState extends State<HazyWidget> with TickerProviderStateMixin {
   AnimationController _sunnyController;
   Animation<double> _sunnyAnimationRotationTransition;
 
@@ -47,7 +47,7 @@ class _HazySunshineWidgetState extends State<HazySunshineWidget> with TickerProv
   }
 
   @override
-  void didUpdateWidget(HazySunshineWidget oldWidget) {
+  void didUpdateWidget(HazyWidget oldWidget) {
     super.didUpdateWidget(oldWidget);
   }
 
@@ -81,7 +81,7 @@ class _HazySunshineWidgetState extends State<HazySunshineWidget> with TickerProv
         break;
       case DayState.night:
         {
-          _sunnyImagePath = 'assets/images/sunny_afternoon.png';
+          _sunnyImagePath = 'assets/images/moon_afternoon.png';
           _hazyImagePath = 'assets/images/hazy.png';
         }
         break;

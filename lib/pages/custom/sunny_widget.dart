@@ -3,8 +3,10 @@ import 'package:weather/theme/theme.dart';
 
 class SunnyWidget extends StatefulWidget {
   final DayState dayState;
+  final double width;
+  final double height;
 
-  SunnyWidget(this.dayState);
+  SunnyWidget(this.dayState, this.width, this.height);
 
   @override
   _SunnyWidgetState createState() => _SunnyWidgetState();
@@ -50,14 +52,14 @@ class _SunnyWidgetState extends State<SunnyWidget> with TickerProviderStateMixin
         _imagePath = 'assets/images/sunny_night.png';
       }break;
       case DayState.night:{
-        _imagePath = 'assets/images/sunny_afternoon.png';
+        _imagePath = 'assets/images/moon_afternoon.png';
       }break;
     }
     return RotationTransition(
       turns: _animation,
       child: Container(
-        width: 128,
-        height: 128,
+        width: widget.width,
+        height: widget.height,
         decoration: BoxDecoration(
         image: DecorationImage(
           image: ExactAssetImage(_imagePath),

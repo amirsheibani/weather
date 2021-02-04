@@ -137,6 +137,10 @@ flutter:
     - assets/images/rain_evening.png
     - assets/images/rain_morning.png
     - assets/images/rain_night.png
+    - assets/images/showers_afternoon.png
+    - assets/images/showers_evening.png
+    - assets/images/showers_morning.png
+    - assets/images/showers_night.png
     - assets/images/snow_afternoon.png
     - assets/images/snow_evening.png
     - assets/images/snow_morning.png
@@ -147,3 +151,8 @@ flutter:
     - assets/images/sunny_night.png
     - assets/images/hazy.png
     - assets/images/thunder_storm.png
+    - assets/images/ice.png
+    - assets/images/windy_afternoon.png
+    - assets/images/windy_evening.png
+    - assets/images/windy_morning.png
+    - assets/images/windy_night.png

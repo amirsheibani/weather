@@ -154,7 +154,7 @@ class _MostlyCloudyTStormsWidgetState extends State<MostlyCloudyTStormsWidget> w
         {
           _sunnyImagePath = 'assets/images/sunny_morning.png';
           _cloudImagePath = 'assets/images/cloud_morning.png';
-          _rainImagePath = 'assets/images/rain_morning.png';
+          _rainImagePath = 'assets/images/showers_morning.png';
           _thunderStormImagePath = 'assets/images/thunder_storm.png';
         }
         break;
@@ -162,7 +162,7 @@ class _MostlyCloudyTStormsWidgetState extends State<MostlyCloudyTStormsWidget> w
         {
           _sunnyImagePath = 'assets/images/sunny_evening.png';
           _cloudImagePath = 'assets/images/cloud_evening.png';
-          _rainImagePath = 'assets/images/rain_evening.png';
+          _rainImagePath = 'assets/images/showers_evening.png';
           _thunderStormImagePath = 'assets/images/thunder_storm.png';
         }
         break;
@@ -170,15 +170,15 @@ class _MostlyCloudyTStormsWidgetState extends State<MostlyCloudyTStormsWidget> w
         {
           _sunnyImagePath = 'assets/images/sunny_night.png';
           _cloudImagePath = 'assets/images/cloud_night.png';
-          _rainImagePath = 'assets/images/rain_night.png';
+          _rainImagePath = 'assets/images/showers_night.png';
           _thunderStormImagePath = 'assets/images/thunder_storm.png';
         }
         break;
       case DayState.night:
         {
-          _sunnyImagePath = 'assets/images/sunny_afternoon.png';
+          _sunnyImagePath = 'assets/images/moon_afternoon.png';
           _cloudImagePath = 'assets/images/cloud_afternoon.png';
-          _rainImagePath = 'assets/images/rain_afternoon.png';
+          _rainImagePath = 'assets/images/showers_afternoon.png';
           _thunderStormImagePath = 'assets/images/thunder_storm.png';
         }
         break;
