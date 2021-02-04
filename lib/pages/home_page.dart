@@ -1,11 +1,19 @@
 import 'package:weather/blocs/my_bloc.dart';
 import 'package:weather/pages/custom/cloudy.dart';
 import 'package:weather/pages/custom/day_state_information_widget.dart';
+import 'package:weather/pages/custom/dreary.dart';
+import 'package:weather/pages/custom/fog.dart';
 import 'package:weather/pages/custom/hazy_sunshine.dart';
 import 'package:weather/pages/custom/mostly_cloudy.dart';
+import 'package:weather/pages/custom/mostly_cloudy_showers.dart';
+import 'package:weather/pages/custom/mostly_cloudy_t_storms.dart';
 import 'package:weather/pages/custom/mostly_sunny.dart';
 import 'package:weather/pages/custom/partly_sunny.dart';
+import 'package:weather/pages/custom/partly_sunny_showers.dart';
+import 'package:weather/pages/custom/partly_sunny_t_storms.dart';
+import 'package:weather/pages/custom/showers.dart';
 import 'package:weather/pages/custom/sunny_widget.dart';
+import 'package:weather/pages/custom/t_storms.dart';
 import 'package:weather/pages/setting_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_device_type/flutter_device_type.dart';
@@ -364,7 +372,15 @@ class _HomePageState extends State<HomePage> {
               // child: PartlySunnyWidget(_lastDayState,256,256),
               // child: HazySunshineWidget(_lastDayState,256,256),
               // child: MostlyCloudyWidget(_lastDayState,256,256),
-              child: CloudyWidget(_lastDayState,256,256),
+              // child: CloudyWidget(_lastDayState,256,256),
+              // child: DrearyWidget(_lastDayState,256,256),
+              // child: FogWidget(_lastDayState,256,256),
+              // child: ShowersWidget(_lastDayState,256,256),
+              // child: MostlyCloudyShowersWidget(_lastDayState,256,256),
+              // child: PartlySunnyShowersWidget(_lastDayState,256,256),
+              // child: TStormsWidget(_lastDayState,256,256),
+              // child: MostlyCloudyTStormsWidget(_lastDayState,256,256),
+              child: PartlySunnyTStormsWidget(_lastDayState,256,256),
               duration: Duration(milliseconds: 1000),
               top: _positionDayStatusWidget.dy,
               left: width,

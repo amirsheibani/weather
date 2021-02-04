@@ -1,20 +1,18 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:weather/theme/theme.dart';
 
-
-class MostlySunnyWidget extends StatefulWidget {
+class PartlySunnyShowersWidget extends StatefulWidget {
   final DayState dayState;
   final double width;
   final double height;
 
-  MostlySunnyWidget(this.dayState, this.width, this.height);
+  PartlySunnyShowersWidget(this.dayState, this.width, this.height);
 
   @override
-  _MostlySunnyWidgetState createState() => _MostlySunnyWidgetState();
+  _PartlySunnyShowersWidgetState createState() => _PartlySunnyShowersWidgetState();
 }
 
-class _MostlySunnyWidgetState extends State<MostlySunnyWidget> with TickerProviderStateMixin {
+class _PartlySunnyShowersWidgetState extends State<PartlySunnyShowersWidget> with TickerProviderStateMixin {
   AnimationController _sunnyController;
   Animation<double> _sunnyAnimationRotationTransition;
 
@@ -24,6 +22,7 @@ class _MostlySunnyWidgetState extends State<MostlySunnyWidget> with TickerProvid
 
   String _sunnyImagePath;
   String _cloudImagePath;
+  String _rainImagePath;
 
   @override
   void initState() {
@@ -58,7 +57,7 @@ class _MostlySunnyWidgetState extends State<MostlySunnyWidget> with TickerProvid
   }
 
   @override
-  void didUpdateWidget(MostlySunnyWidget oldWidget) {
+  void didUpdateWidget(PartlySunnyShowersWidget oldWidget) {
     super.didUpdateWidget(oldWidget);
   }
 
@@ -76,24 +75,28 @@ class _MostlySunnyWidgetState extends State<MostlySunnyWidget> with TickerProvid
         {
           _sunnyImagePath = 'assets/images/sunny_morning.png';
           _cloudImagePath = 'assets/images/cloud_morning.png';
+          _rainImagePath = 'assets/images/rain_morning.png';
         }
         break;
       case DayState.afternoon:
         {
           _sunnyImagePath = 'assets/images/sunny_evening.png';
           _cloudImagePath = 'assets/images/cloud_evening.png';
+          _rainImagePath = 'assets/images/rain_evening.png';
         }
         break;
       case DayState.evening:
         {
           _sunnyImagePath = 'assets/images/sunny_night.png';
           _cloudImagePath = 'assets/images/cloud_night.png';
+          _rainImagePath = 'assets/images/rain_night.png';
         }
         break;
       case DayState.night:
         {
           _sunnyImagePath = 'assets/images/sunny_afternoon.png';
           _cloudImagePath = 'assets/images/cloud_afternoon.png';
+          _rainImagePath = 'assets/images/rain_afternoon.png';
         }
         break;
     }
@@ -125,6 +128,26 @@ class _MostlySunnyWidgetState extends State<MostlySunnyWidget> with TickerProvid
                 decoration: BoxDecoration(
                   image: DecorationImage(
                     image: ExactAssetImage(_cloudImagePath),
+                    fit: BoxFit.fill,
+                  ),
+                  // shape: BoxShape.rectangle,
+                ),
+              ),
+            ),
+          ),
+        ),
+        Transform(
+          transform: Matrix4.translationValues(30, 120, 0.0),
+          child: SlideTransition(
+            position: _cloudAnimationSlideTransition,
+            child: FadeTransition(
+              opacity: _cloudAnimationFadeTransition,
+              child: Container(
+                width: widget.width/3,
+                height: widget.height/3,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: ExactAssetImage(_rainImagePath),
                     fit: BoxFit.fill,
                   ),
                   // shape: BoxShape.rectangle,
