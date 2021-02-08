@@ -1,7 +1,7 @@
 # weather
 
-This weather application used OpenWeatherMap api
-
+This weather application used DarkSky api and use UI/UX design by - [SergeyValiukh](https://dribbble.com/SergeyValiukh)
+![Weather](demo/demo.gif)
 ## Getting Started
 
 This project is a starting point for a Flutter application.

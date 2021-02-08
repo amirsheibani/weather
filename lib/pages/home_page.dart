@@ -150,7 +150,7 @@ class _HomePageState extends State<HomePage> {
       Padding(
         padding: EdgeInsets.only(top: 16.0),
         child: Text(
-          '${morningDataList.length > 0 ? morningDataList.first.temperature.toInt() :''}',
+          morningDataList.length > 0 ? '${morningDataList.first.temperature.toInt()} C°':'',
           style: Theme.of(context).textTheme.headline2.copyWith(color: Colors.white),
         ),
       ),
@@ -167,7 +167,7 @@ class _HomePageState extends State<HomePage> {
       Padding(
         padding: EdgeInsets.only(top: 16.0),
         child: Text(
-          '${afternoonDataList.length > 0 ? afternoonDataList.first.temperature.toInt() :''}',
+          afternoonDataList.length > 0 ? '${afternoonDataList.first.temperature.toInt()} C°' :'',
           style: Theme.of(context).textTheme.headline2.copyWith(color: Colors.white),
         ),
       ),
@@ -184,7 +184,7 @@ class _HomePageState extends State<HomePage> {
       Padding(
         padding: EdgeInsets.only(top: 16.0),
         child: Text(
-          '${eveningDataList.length > 0 ? eveningDataList.first.temperature.toInt() :''}',
+          eveningDataList.length > 0 ? '${eveningDataList.first.temperature.toInt()} C°' :'',
           style: Theme.of(context).textTheme.headline2.copyWith(color: Colors.white),
         ),
       ),
@@ -201,7 +201,7 @@ class _HomePageState extends State<HomePage> {
       Padding(
         padding: EdgeInsets.only(top: 16.0),
         child: Text(
-          '${nightDataList.length > 0 ? nightDataList.first.temperature.toInt() :''}',
+          nightDataList.length > 0 ? '${nightDataList.first.temperature.toInt()} C°' :'',
           style: Theme.of(context).textTheme.headline2.copyWith(color: Colors.white),
         ),
       ),
