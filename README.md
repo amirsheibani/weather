@@ -1,6 +1,7 @@
 # weather
 
 This weather application used DarkSky api and use UI/UX design by - [SergeyValiukh](https://dribbble.com/SergeyValiukh)
+
 ![Weather](demo/demo.gif)
 ## Getting Started
 
