@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:weather/theme/theme.dart';
 
-class SunnyWidget extends StatefulWidget {
+class ClearWidget extends StatefulWidget {
   final DayState dayState;
   final double width;
   final double height;
 
-  SunnyWidget(this.dayState, this.width, this.height);
+  ClearWidget(this.dayState, this.width, this.height);
 
   @override
-  _SunnyWidgetState createState() => _SunnyWidgetState();
+  _ClearWidgetState createState() => _ClearWidgetState();
 }
 
-class _SunnyWidgetState extends State<SunnyWidget> with TickerProviderStateMixin {
+class _ClearWidgetState extends State<ClearWidget> with TickerProviderStateMixin {
   AnimationController _controller;
   Animation<double> _animation;
   String _imagePath;
@@ -29,7 +29,7 @@ class _SunnyWidgetState extends State<SunnyWidget> with TickerProviderStateMixin
     super.initState();
   }
   @override
-  void didUpdateWidget(SunnyWidget oldWidget) {
+  void didUpdateWidget(ClearWidget oldWidget) {
     super.didUpdateWidget(oldWidget);
   }
 
